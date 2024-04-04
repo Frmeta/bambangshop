@@ -1,4 +1,4 @@
-use dashmap:DashMap;
+use dashmap::DashMap;
 use lazy_static::lazy_static;
 use crate::model::subscriber::Subscriber;
 
@@ -10,5 +10,5 @@ lazy_static!{
 pub struct SubscriberRepository;
 
 impl SubscriberRepository{
-    
+
 }
