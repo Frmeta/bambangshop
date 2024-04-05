@@ -16,4 +16,14 @@ impl NotificationService{
         let subscriber_result: Subscriber = SubscriberRepository::add(product_type_str, subscriber);
         return Ok(subscriber_result);
     }
+
+    pub fn unsubscribe(product_type: &str, url: &str) -> Result<Subscriber> {
+        let product_type_upper: String = product_type.to_uppercase();
+        let product_type_str: &str = &product_type_upper.as_str();
+        let result: Option<Subscriber> = SubscriberRepository::delete(product_type_str, url);
+        if result.is_none() {
+            return Err(compose_error_response(Status::NotFound, String::from("Subscriber not found.")));
+        }
+        return Ok(result.unwrap());
+    }
 }
