@@ -25,7 +25,7 @@ The subscribers are another Rocket instances, so the notification will be sent u
 
 ## API Documentations
 
-You can download the Postman Collection JSON here: https://api.postman.com/collections/1518342-1ab29a75-95d2-4e61-a257-0971e15b75a0?access_key=PMAT-01HT9WP343FDK3QKB7HGE2AKHJ
+You can download the Postman Collection JSON here: https://ristek.link/AdvProgWeek7Postman
 
 After you download the Postman Collection, you can try the endpoints inside "BambangShop Publisher" folder.
 This Postman collection also contains endpoints that you need to implement later on (the `Notification` feature).
