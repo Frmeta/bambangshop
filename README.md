@@ -59,11 +59,11 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
     -   [x] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [X] Commit: `Implement subscribe function in Notification service.`
+    -   [X] Commit: `Implement subscribe function in Notification controller.`
+    -   [X] Commit: `Implement unsubscribe function in Notification service.`
+    -   [X] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [X] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -90,5 +90,15 @@ When programming using Rust, we are enforced by rigorous compiler constraints to
 
 
 #### Reflection Publisher-2
+
+In the Model-View Controller (MVC) compound pattern, there is no “Service” and “Repository”. Model in MVC covers both data storage and business logic. Explain based on your understanding of design principles, why we need to separate “Service” and “Repository” from a Model?
+- Menurut prinsip desain 'Seperatin of Concerns', tiap bagian sistem software sebaiknya dipisahkan berdasarkan daerah fokusnya sehingga apabila ada perubahan hanya mengubah bagian tersebut saja. "Repository" fokus ke bagian penyimpanan dan pengambilan data sedangkan "Service" menangani business logic.
+
+What happens if we only use the Model? Explain your imagination on how the interactions between each model (Program, Subscriber, Notification) affect the code complexity for each model?
+- Apabila kita hanya menggunakan model untuk menangani penyimpanan data dan business logic, dapat terjadi high coupling (setiap model harus mengetahui informasi tentang model lain, perubahan pada satu model dapat menyebabkan perubahan pada model lain pula). Akibatnya kode menjadi sulit dipelihara.
+
+Have you explored more about Postman? Tell us how this tool helps you to test your current work. Maybe you want to also list which features in Postman you are interested in or feel like it’s helpful to help your Group Project or any of your future software engineering projects.
+- Postman adalah alat yang digunakan untuk melakukan uji coba API. Fitur yang saya anggap paling menarik adalah HTTP Request dimana saya dapat mengatur sendiri jenis request (GET, POST, DELETE, dll) serta membagikan collection of requests hanya menggunakan copy paste text. 
+
 
 #### Reflection Publisher-3
