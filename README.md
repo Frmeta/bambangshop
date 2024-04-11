@@ -65,11 +65,11 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [X] Commit: `Implement unsubscribe function in Notification controller.`
     -   [X] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
-    -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
-    -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
-    -   [ ] Commit: `Implement publish function in Program service and Program controller.`
-    -   [ ] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [X] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
+    -   [X] Commit: `Implement notify function in Notification service to notify each Subscriber.`
+    -   [X] Commit: `Implement publish function in Program service and Program controller.`
+    -   [X] Commit: `Edit Product service methods to call notify after create/delete.`
+    -   [X] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -82,7 +82,7 @@ In the Observer pattern diagram explained by the Head First Design Pattern book,
 - Penggunaan interface (atau trait di Rust) digunakan apabila objek Subscriber kita terdiri dari beberapa tipe yang memiliki behaviour yang berbeda sendiri. Namun karena pada kasus BambangShop semua subscribers dianggap sama, maka interface tersebut tidak diperlukan
 
 id in Product and url in Subscriber is intended to be unique. Explain based on your understanding, is using Vec (list) sufficient or using DashMap (map/dictionary) like we currently use is necessary for this case?
-- Apabila id pada Product dan url pada subscriber diapastikan selalu unik, maka DashMap (map/dictionary) lebih cocok digunakan daripada Vec (list). Hal ini dikarenakan DashMap yang menggunakan variabel yang unik tersebut sebagai key dapat mempercepat lookup, insertion, dan deletion dengan kompleksitas waktu rata-ratanya adalah O(n). Sedangkan penggunaan Vec (list) lebih lambat karena kompleksitas rata-rata waktunya O(n).
+- Apabila id pada Product dan url pada subscriber diapastikan selalu unik, maka DashMap (map/dictionary) lebih cocok digunakan daripada Vec (list). Hal ini dikarenakan DashMap yang menggunakan variabel yang unik tersebut sebagai key dapat mempercepat lookup, insertion, dan deletion dengan kompleksitas waktu rata-ratanya adalah O(1)). Sedangkan penggunaan Vec (list) lebih lambat karena kompleksitas rata-rata waktunya O(n).
 
 When programming using Rust, we are enforced by rigorous compiler constraints to make a thread-safe program. In the case of List of Subscribers (SUBSCRIBERS) static variable, we used the DashMap external library for thread-safe HashMap. Explain based on your understanding of design patterns, do we still need DashMap or we can implement Singleton pattern instead?
 - Dalam Rust, DashMap dan HashMap sama-sama digunakan untuk menyimpan data berupa pasangan key dan value. Namun perbedaanya, DashMap mendukung thread safety dimana dapat diakses dan dimodifikasi oleh banyak threads secara bersamaan tanpa mengakibatkan data races.
